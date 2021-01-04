@@ -1,0 +1,26 @@
+homestead環境の構築
+
+①vagrant box add laravel/homestead
+②git clone https://github.com/laravel/homestead.git Homestead
+③cd Homestead
+④git checkout release
+⑤bash init.sh
+⑥cp Homestead.yaml.example Homestead.yaml
+⑦vim homestead.yamlし、以下の部分を変更
+
+  folders:
+    - map: /Users/ユーザー名/Laravel_CRUD
+      to: /home/vagrant/code
+  sites:
+    - map: homestead.dawn
+      to: /home/vagrant/code/Laravel/public
+
+⑧192.168.10.10  homestead.dawn
+↑　hostsファイルの一番下に追記して上書きする。
+（hostsファイルはそのままでは上書きできないので、
+いったんデスクトップなどに移し、エディタで編集する）
+
+⑨homesteadをVirtualBoxに立ち上げる
+（ターミナルでHomesteadまで移動し、vagrant upコマンドを実行）
+
+10)「vagrant ssh」コマンドでゲストOSにリモート接続する
