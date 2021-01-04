@@ -24,3 +24,5 @@ homestead環境の構築
 （ターミナルでHomesteadまで移動し、vagrant upコマンドを実行）
 
 10)「vagrant ssh」コマンドでゲストOSにリモート接続する
+以下のように表示されれば成功
+vagrant@homestead:~$
