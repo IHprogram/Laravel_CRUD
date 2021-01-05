@@ -12,4 +12,11 @@ class PostsController extends Controller
         echo 'hello world!<br>';
         echo 'コントローラー';
     }
+
+    // indexメソッド
+    public function index()
+    {
+        $list = DB::table('posts')->get();
+        return view('posts.index', ['list'=>$list]);
+    }
 }
