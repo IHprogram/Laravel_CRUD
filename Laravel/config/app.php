@@ -1,3 +1,6 @@
+<!-- Laravelでどのライブラリを使うかの設定は、
+「config」ディレクトリの直下にある、この「app.php」で追加,変更することができる -->
+
 <?php
 
 return [
@@ -177,6 +180,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // ↓以下に追加した「HtmlServiceProvider」で、
+        // HTMLのタグを省略したLaravel用の記述方法をまとめたライブラリを使用できるようにした
+        CollectiveHtmlHtmlServiceProvider::class,
     ],
 
     /*
