@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', function(){
-    echo 'Hello World!';
-});
+// Route::get('hello', function(){
+//     echo 'Hello World!';
+// });
+
+// PostsControllerのhelloメソッド」という指定を意味している
+Route::get('hello', 'PostsController@hello');
