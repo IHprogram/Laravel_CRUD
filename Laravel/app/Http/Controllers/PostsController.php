@@ -20,4 +20,9 @@ class PostsController extends Controller
         $list = DB::table('posts')->get();
         return view('posts.index', ['list'=>$list]);
     }
+
+    public function createForm()
+    {
+        return view('posts.createForm');
+    }
 }
