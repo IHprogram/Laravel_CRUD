@@ -21,3 +21,5 @@ Route::get('/', function () {
 
 // PostsControllerのhelloメソッド」という指定を意味している
 Route::get('hello', 'PostsController@hello');
+
+Route::get('index', 'PostsController@index');
