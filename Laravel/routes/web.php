@@ -23,3 +23,4 @@ Route::get('/', function () {
 Route::get('hello', 'PostsController@hello');
 
 Route::get('index', 'PostsController@index');
+// 次のURLでみることができる → http://homestead.dawn/index
