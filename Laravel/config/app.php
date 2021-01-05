@@ -232,6 +232,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // 以下2行の記述は、フォームファサードを使用する設定をオンにしている（つまり、フォームファサードが使えるようになる）。
+        // 具体的には、185行目で追加した「HtmlServiceProvider」ライブラリの中の
+        // 「html」と「Form」ファサード機能を使うという設定を行った。
+        'Form' => CollectiveHtmlFormFacade::class,
+        'Html' => CollectiveHtmlHtmlFacade::class,
     ],
 
 ];
