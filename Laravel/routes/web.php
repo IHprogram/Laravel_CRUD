@@ -35,3 +35,6 @@ Route::post('create', 'PostsController@create');
 // 書き方は「$変数名」ではなく「{変数名}」となる
 // 更新画面へのルーティング
 Route::get('post/{id}/update-form', 'PostsController@updateForm');
+
+// 更新処理に関するルーティング
+Route::post('post/update', 'PostsController@update');
