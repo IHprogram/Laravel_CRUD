@@ -22,5 +22,11 @@ Route::get('/', function () {
 // PostsControllerのhelloメソッド」という指定を意味している
 Route::get('hello', 'PostsController@hello');
 
-Route::get('index', 'PostsController@index');
 // 次のURLでみることができる → http://homestead.dawn/index
+Route::get('index', 'PostsController@index');
+
+// 投稿画面へのルーティング（URL：http://homestead.dawn/post/create-form）
+Route::get('post/create-form', 'PostsController@createForm');
+
+// 登録処理に関するルーティング
+Route::post('create', 'PostsController@create');

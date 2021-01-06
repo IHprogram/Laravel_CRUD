@@ -14,6 +14,7 @@
     </header>
 
     <div class='container'>
+        <p class="pull-right"><a class="btn btn-success" href="post/create-form">投稿する</a></p>
         <h2 class='page-header'>投稿一覧</h2>
         <table class='table table-hover'>
             <tr>
