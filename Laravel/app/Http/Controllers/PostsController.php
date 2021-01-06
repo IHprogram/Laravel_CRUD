@@ -42,11 +42,13 @@ class PostsController extends Controller
         return redirect('/index');
     }
 
-    public function updateForm()
+    public function updateForm($id)
     {
+        // テーブルから値を$post変数に入れる
         $post = DB::table('posts')
         ->where('id', 1)
         ->first();
+        // compact関数で値をビュー側に渡す
         return view('posts.updateForm', compact('post'));
     }
 }
