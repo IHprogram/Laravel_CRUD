@@ -46,7 +46,7 @@ class PostsController extends Controller
     {
         // テーブルから値を$post変数に入れる
         $post = DB::table('posts')
-        ->where('id', 1)
+        ->where('id', $id)
         ->first();
         // compact関数で値をビュー側に渡す
         return view('posts.updateForm', compact('post'));
