@@ -30,3 +30,8 @@ Route::get('post/create-form', 'PostsController@createForm');
 
 // 登録処理に関するルーティング
 Route::post('create', 'PostsController@create');
+
+// GETで通信と一緒に送られるパラメータを受け取るには、web.php内に変数名を用意する必要がある
+// 書き方は「$変数名」ではなく「{変数名}」となる
+// 更新画面へのルーティング
+Route::get('post/{id}/update-form', 'PostsController@updateForm');
