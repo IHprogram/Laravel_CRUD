@@ -51,4 +51,19 @@ class PostsController extends Controller
         // compact関数で値をビュー側に渡す
         return view('posts.updateForm', compact('post'));
     }
+
+    // データの更新（Update）を行うメソッド
+    public function update(Request $request)
+    {
+        $id = $request->input('id');
+        // <input>タグのname属性が「newPost」
+        // と指定されていたところの値を$post変数内に入れている
+        $up_post = $request->input('upPost');
+        DB::table('posts')
+            ->where('id', $id)
+            ->update(
+                ['post' => $up_post]
+            );
+        return redirect('/index');
+    }
 }
