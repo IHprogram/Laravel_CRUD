@@ -38,3 +38,6 @@ Route::get('post/{id}/update-form', 'PostsController@updateForm');
 
 // 更新処理に関するルーティング
 Route::post('post/update', 'PostsController@update');
+
+// 削除処理に関するルーティング
+Route::get('post/{id}/delete', 'PostsController@delete');
