@@ -22,6 +22,7 @@
                 <th>投稿内容</th>
                 <th>投稿日時</th>
                 <th></th>
+                <th></th>
             </tr>
             @foreach ($list as $list)
             <tr>
@@ -29,6 +30,7 @@
                 <td>{{ $list->post }}</td>
                 <td>{{ $list->created_at }}</td>
                 <td><a class="btn btn-primary" href="/post/{{$list->id}}/update-form">更新</a></td>
+                <td><a class="btn btn-danger" href="/post/{{$list->id}}/delete">削除</a></td>
             </tr>
             @endforeach
         </table>
