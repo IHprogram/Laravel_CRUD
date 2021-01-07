@@ -66,4 +66,14 @@ class PostsController extends Controller
             );
         return redirect('/index');
     }
+
+    // データの削除（Delete）を行うメソッド
+    public function delete($id)
+    {
+        DB::table('posts')
+            ->where('id', $id)
+            ->delete();
+
+        return redirect('/index');
+    }
 }
