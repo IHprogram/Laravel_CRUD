@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
+{{-- ビューのテンプレート化に伴い、
+<head>タグやヘッダー,フッターにあたる箇所を全て削除 --}}
 
-<head>
-    <meta charset='utf-8"'>
-    <link rel='stylesheet' href="{{ asset('/css/app.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+{{-- 以下の記述で継承を行うことができる --}}
+@extends('app')
 
-<body>
-
-    <header>
-        <h1>Laravelを使った投稿機能の実装</h1>
-    </header>
-
+@section('content')
     <div class='container'>
         <p class="pull-right"><a class="btn btn-success" href="post/create-form">投稿する</a></p>
         <h2 class='page-header'>投稿一覧</h2>
@@ -35,11 +27,4 @@
             @endforeach
         </table>
     </div>
-    <footer>
-        <small>Laravel@dawn.curriculum</small>
-    </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-</body>
-
-</html>
+@endsection
