@@ -2,7 +2,7 @@
 <head>タグやヘッダー,フッターにあたる箇所を全て削除 --}}
 
 {{-- 以下の記述で継承を行うことができる --}}
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
     <div class='container'>

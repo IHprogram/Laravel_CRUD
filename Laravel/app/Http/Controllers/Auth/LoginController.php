@@ -25,7 +25,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // ログイン成功後は、トップページ（投稿したメッセージ一覧表示画面）に移動するよう設定
+    protected $redirectTo = '/index';
 
     /**
      * Create a new controller instance.

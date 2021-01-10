@@ -41,3 +41,7 @@ Route::post('post/update', 'PostsController@update');
 
 // 削除処理に関するルーティング
 Route::get('post/{id}/delete', 'PostsController@delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

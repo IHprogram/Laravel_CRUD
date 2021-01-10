@@ -7,6 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
+    // PostsController.php内の各メソッド、つまりページを読み込むとき前に、auth機能を実行させる。
+    // 以下の処理は、ユーザーがログインしていなかった場合に、
+    // PostsController.php内の各ページに飛ぶことができず、ログイン画面に戻るという処理。
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     // helloメソッドを追加
     public function hello()
     {

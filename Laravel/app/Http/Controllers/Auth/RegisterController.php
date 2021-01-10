@@ -27,7 +27,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // ユーザー登録後はログインページに移動するよう設定
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
